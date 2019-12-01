@@ -205,10 +205,13 @@ h1 {
   }
   .form {
     width: 80%;
-    max-width: 50vw;
+    max-width: 55vw;
   }
   .intro {
-    font-size: 36px;
+    font-size: 29px;
+  }
+  .signup-header {
+    font-size: 29px;
   }
   .div-block {
     padding-left: 20px;
