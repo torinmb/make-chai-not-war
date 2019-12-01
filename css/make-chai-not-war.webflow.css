@@ -259,6 +259,7 @@ h1 {
     font-size: 28px;
   }
   .signup-header {
+    margin-bottom: 10px;
     font-size: 28px;
     text-align: left;
   }
@@ -273,13 +274,15 @@ h1 {
     font-size: 14px;
   }
   .div-block {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .image {
     display: block;
     overflow: visible;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 8px;
+    padding-left: 8px;
   }
   .heading {
     font-size: 28px;
