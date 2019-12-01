@@ -98,7 +98,8 @@ h1 {
   top: 0%;
   right: 0%;
   bottom: 0%;
-  grid-template-areas: ". ." "Intro ." ". ." ". ." ". ." ". ." ". Signup";
+  height: 100vh;
+  grid-template-areas: ". spacer" "Intro spacer" ". spacer" ". spacer" ". spacer" ". spacer" ". Signup";
   -ms-grid-rows: auto auto auto auto auto auto auto;
   grid-template-rows: auto auto auto auto auto auto auto;
 }
@@ -178,6 +179,10 @@ h1 {
   align-items: stretch;
 }
 
+.image {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .form {
     width: 80%;
@@ -188,7 +193,25 @@ h1 {
     grid-template-columns: 1fr;
   }
   .grid-2 {
-    grid-template-areas: ". ." "Intro Intro" ". ." ". ." ". ." ". ." "Signup Signup";
+    grid-template-areas: ". . ." "Intro Intro ." ". . ." ". . ." ". . ." ". . ." ". . ." ". . ." ". Signup Signup";
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+  }
+  .form {
+    width: 80%;
+    max-width: 50vw;
+  }
+  .intro {
+    font-size: 36px;
+  }
+  .div-block {
+    padding-left: 20px;
   }
 }
 
@@ -196,12 +219,19 @@ h1 {
   h1 {
     font-size: 30px;
   }
+  .section {
+    background-image: none;
+    background-position: 0px 0px;
+    background-size: auto;
+    background-repeat: repeat;
+  }
   .input {
     width: 100%;
     font-size: 14px;
   }
   .form {
     width: auto;
+    max-width: none;
     padding-right: 0px;
     padding-left: 0px;
   }
@@ -209,13 +239,25 @@ h1 {
     font-size: 14px;
   }
   .grid-2 {
+    display: block;
     height: 100vh;
     min-height: 800px;
     grid-auto-flow: row;
-    grid-template-areas: "Area-2 Area-2" "Intro Intro" "Area Area" "Area Area" "Area Area" "Area Area" "Signup Signup";
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-areas: "Intro Intro Intro" ". . ." "Area Area Area" "Area Area Area" "Area Area Area" "Area Area Area" ". . ." ". . ." "Signup Signup Signup";
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto 16px auto 16px auto 16px auto 16px auto 16px auto 16px auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+  }
+  .intro {
+    font-size: 28px;
   }
   .signup-header {
-    text-align: center;
+    font-size: 28px;
+    text-align: left;
   }
   .form-block {
     width: 100vw;
@@ -227,22 +269,34 @@ h1 {
   .body {
     font-size: 14px;
   }
-}
-
-#w-node-8d808043b447-57360aa1 {
-  -ms-grid-row: 7;
-  -ms-grid-column: 2;
-  grid-area: Signup;
-  -ms-grid-row-align: end;
-  align-self: end;
-  -ms-grid-column-align: center;
-  justify-self: center;
+  .div-block {
+    margin-top: 20px;
+  }
+  .image {
+    display: block;
+    overflow: visible;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .heading {
+    font-size: 28px;
+  }
 }
 
 #w-node-29f1ff065599-57360aa1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: Intro;
+  -ms-grid-row-align: end;
+  align-self: end;
+  -ms-grid-column-align: center;
+  justify-self: center;
+}
+
+#w-node-8d808043b447-57360aa1 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: Signup;
   -ms-grid-row-align: end;
   align-self: end;
   -ms-grid-column-align: center;
@@ -264,14 +318,14 @@ h1 {
     grid-area: Area;
   }
   @media (max-width: 991px) {
-    #w-node-8d808043b447-57360aa1 {
-      -ms-grid-row: 7;
-      -ms-grid-column: 1;
-      -ms-grid-column-span: 2;
-    }
     #w-node-29f1ff065599-57360aa1 {
       -ms-grid-row: 2;
       -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+    }
+    #w-node-8d808043b447-57360aa1 {
+      -ms-grid-row: 9;
+      -ms-grid-column: 2;
       -ms-grid-column-span: 2;
     }
     #w-node-fe3e22d50e76-57360aa1 {
@@ -280,15 +334,15 @@ h1 {
     }
   }
   @media (max-width: 479px) {
-    #w-node-8d808043b447-57360aa1 {
-      -ms-grid-row: 7;
-      -ms-grid-column: 1;
-      -ms-grid-column-span: 2;
-    }
     #w-node-29f1ff065599-57360aa1 {
-      -ms-grid-row: 2;
+      -ms-grid-row: 1;
       -ms-grid-column: 1;
-      -ms-grid-column-span: 2;
+      -ms-grid-column-span: 5;
+    }
+    #w-node-8d808043b447-57360aa1 {
+      -ms-grid-row: 17;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 5;
     }
   }
 }
